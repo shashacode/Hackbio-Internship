@@ -31,6 +31,7 @@
 
 <!--EndFragment-->
 #### ![Figure 1: Heatmap of Differential Gene Expression](https://github.com/shashacode/Hackbio-Internship/blob/main/figure%201.jpg)
+#### Figure 1: Heatmap of Differential Gene Expression
 - Lung Cancer (LUAD AND LUSC) were found to share over 55% of their DEGs, indicating high similarity.
 - KICH and KIRC, despite being both kidney cancers, display less than 10% shared DE genes, indicating divergent gene expression profiles. This suggests that kidney cancer subtypes have unique molecular characteristics.
 - THCA (Thyroid carcinoma) also exhibit low overlap with other cancers in terms of DE genes.
@@ -42,6 +43,8 @@
 <!--EndFragment-->
 
 #### ![Table 1: The normalized expression levels of seven cross-cancer gene signatures across 12 types of cancer and normal samples.](https://github.com/shashacode/Hackbio-Internship/blob/main/figure2.jpg)
+#### Table 1: The normalized expression levels of seven cross-cancer gene signatures across 12 types of cancer and normal samples.
+
 
 - Seven significant cross-cancer gene sets were identified, which were altered in at least four different cancer types.
 - CLUSTER241: Altered in seven cancer types (e.g., BLCA, BRCA, COAD, LUAD). This cluster was enriched in pathways like mitotic prometaphase and M phase, key stages in cell division.
@@ -49,6 +52,7 @@
 
 <!--StartFragment--> 3] Cross-cancer gene Signature <!--EndFragment-->
 #### ![Figure 2: The normalized expression levels of SFTPA1 and SFTPA2 across 12 types of cancer and normal samples. ](https://github.com/shashacode/Hackbio-Internship/blob/main/fig3.jpg)
+#### Figure 2: The normalized expression levels of SFTPA1 and SFTPA2 across 12 types of cancer and normal samples.
 - Thirty-seven cancer-specific gene sets were identified.
 - CLUSTER1520: A lung cancer-specific gene set containing genes like SFTPA1 and SFTPA2, which are associated with lung function and diseases. These genes were notably downregulated in lung cancer samples.
 
@@ -56,6 +60,7 @@
 
 ### 1. Validation - Leave-One-Out Cross-Validation (LOOCV)
 #### ![Figure 3: The Predictive Accuracy and Error Rates of LOOCV for Each Cancer Type Using the 14-gene Signature](https://github.com/shashacode/Hackbio-Internship/blob/main/fig4.jpg) 
+#### Figure 3: The Predictive Accuracy and Error Rates of LOOCV for Each Cancer Type Using the 14-gene Signature
 - **Red** indicates predictive accuracy.  
 - **Blue** represents error rates.
   
