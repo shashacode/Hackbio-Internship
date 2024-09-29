@@ -70,7 +70,7 @@ A **diverging color palette** is useful when data can vary in two directions fro
 #### ![Figure 7: Top 5 Enriched .](https://github.com/shashacode/Hackbio-Internship/blob/main/Stage%202/Images/enrichment%20path.jpg)
 
 The top 3 Enriched Pathways include Cytokine-Cytokine Receptor Interaction (hsa04060), Viral Protein Interaction with Cytokine and Cytokine Receptor (hsa04061), Chemokine Signaling Pathway (hsa04062)
-
+The enrichment analysis was carried out using ShinyGO and then visualized in a lollipop plot showing the top 5 pathways
 <!--StartFragment-->
 
 The **Cytokine-Cytokine Receptor Interaction** pathway plays a crucial role in regulating immune responses and cell signaling. In glioblastoma, cytokines such as IL-6, IL-8, TNF-α, and TGF-β are often overexpressed, leading to the creation of an immunosuppressive microenvironment. This enables the tumor to evade immune surveillance, supporting tumor growth, angiogenesis, and resistance to therapies. The dysregulation of cytokines in the tumor microenvironment promotes glioblastoma growth and resistance to immune therapies, making this pathway a key target for therapeutic intervention (Wainwright et al., 2014). This pathway had 21 genes enriched in it, with a high-fold enrichment (5.94). This suggests that the dataset is heavily associated with immune responses, particularly involving cell signalling through cytokine interactions. 
