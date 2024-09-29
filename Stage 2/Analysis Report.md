@@ -64,10 +64,10 @@ A **diverging color palette** is useful when data can vary in two directions fro
 
 **Subset of Upregulated and Downregulated Genes**
 
-#### ![Figure 6: Gene Expression Chart for Down regulated and Upregulated gene.](https://github.com/shashacode/Hackbio-Internship/blob/main/Stage%202/Images/fold change.jpg)
+#### ![Figure 6: Gene Expression Chart for Down regulated and Upregulated gene.](https://github.com/shashacode/Hackbio-Internship/blob/main/Stage%202/Images/fold%20change.jpg)
 
 **Top 5 Enriched Pathways**
-#### ![Figure 7: Top 5 Enriched .](https://github.com/shashacode/Hackbio-Internship/blob/main/Stage%202/Images/enrichment path.jpg)
+#### ![Figure 7: Top 5 Enriched .](https://github.com/shashacode/Hackbio-Internship/blob/main/Stage%202/Images/enrichment%20path.jpg)
 
 The top 3 Enriched Pathways include Cytokine-Cytokine Receptor Interaction (hsa04060), Viral Protein Interaction with Cytokine and Cytokine Receptor (hsa04061), Chemokine Signaling Pathway (hsa04062)
 
@@ -89,6 +89,8 @@ In conclusion, the integration of gene expression analysis, functional enrichmen
 
 **References**
 
+Garcia-Sastre, A., & Biron, C. A. (2006). "Type 1 interferons and the virus-host relationship: a lesson in détente." Science, 312(5775), 879-882. https://doi.org/10.1126/science.1125676
+
 Martikainen, M., & Essand, M. (2019). "Oncolytic viruses for the treatment of solid tumors: clinical evidence and barriers." _Journal of Clinical Investigation_, 129(2), 558-569. <https://doi.org/10.1172/JCI121491>
 
 Wainwright, D. A., Balyasnikova, I. V., Chang, A. L., Ahmed, A. U., & Lesniak, M. S. (2014). "TGF-β signaling in glioblastoma and the tumor microenvironment." _Cell & Bioscience_, 4, 29. <https://doi.org/10.1186/2045-3701-4-29> 
@@ -97,9 +99,7 @@ Zha, C., Meng, X., Li, L., & Mi, S. (2020). "Chemokines: Promising Immune-Based 
 
 Zlotnik, A., & Yoshie, O. (2012). "The Chemokine Superfamily Revisited." _Immunity_, 36(5), 705-716. <https://doi.org/10.1016/j.immuni.2012.05.008> 
 
-<!--StartFragment-->\ <!--EndFragment--><!--EndFragment--><!--EndFragment-->
 
-<!--EndFragment-->
 
 
 
