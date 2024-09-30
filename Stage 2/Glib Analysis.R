@@ -84,11 +84,33 @@ heatmap.2(heatmap_data,
           dendrogram = "both",  # Show dendrogram for both rows and columns
           main = "Heatmap: Cluster Both Genes and Samples")
 
-# Assume 'control' and 'treatment' group columns are in the dataset
-# Define control and treatment samples (adjust column names as needed)
-control_samples <- c(1,2,3,4,5)   
+control_samples <- c(1,2,3,4,5)
 treatment_samples <- c(6,7,8,9,10)
 
+# Calculate fold change (treatment/control)
+glibdata <- glibdata %>%
+  mutate(mean_control = rowMeans(select(., all_of(control_samples))),  # Mean of control samples
+         mean_treatment = rowMeans(select(., all_of(treatment_samples))),  # Mean of treatment samples
+         fold_change = (mean_treatment - mean_control) / mean_control)  # Calculate fold change
+
+# Apply t-test for each gene
+glibdata <- glibdata %>%
+  rowwise() %>%
+  mutate(p_value = t.test(c_across(all_of(control_samples)),
+                          c_across(all_of(treatment_samples)))$p.value) %>% 
+  ungroup()
+
+# Define significance thresholds
+fold_change_cutoff <- 0.5  # Corresponds to 50% change (0.5 as fraction)
+p_value_cutoff <- 0.05         # Define significance level
+
+# Create a 'significant' column to classify genes
+glibdata <- glibdata %>%
+  mutate(significant = case_when(
+    fold_change > fold_change_cutoff & p_value < p_value_cutoff ~ "Upregulated",
+    fold_change < -fold_change_cutoff & p_value < p_value_cutoff ~ "Downregulated",
+    TRUE ~ "Not Significant"
+  ))                              
 
 # Calculate fold change (treatment/control)
 glibdata <- glibdata %>%
@@ -97,33 +119,6 @@ glibdata <- glibdata %>%
          fold_change = mean_treatment / mean_control)  # Fold change (treatment/control)
 glibdata <- glibdata %>%
   mutate(log2_fold_change = log2(fold_change))
-
-# Apply t-test for each gene
-glibdata <- glibdata %>%
-  rowwise() %>%
-  mutate(p_value = t.test(c_across(all_of(control_samples)), 
-                          c_across(all_of(treatment_samples)))$p.value) %>%
-  ungroup()
-
-
-# Define significance thresholds
-fold_change_cutoff <- 1.5     # Define threshold for upregulation/downregulation
-p_value_cutoff <- 0.05        # Define significance level
-
-# Subset significantly upregulated genes
-upregulated_genes <- glibdata %>%
-  filter(log2_fold_change > log2(fold_change_cutoff) & p_value < p_value_cutoff)
-
-# Subset significantly downregulated genes
-downregulated_genes <- glibdata %>%
-  filter(log2_fold_change < -log2(fold_change_cutoff) & p_value < p_value_cutoff)
-
-glibdata <- glibdata %>%
-  mutate(significant = case_when(
-    p_value < 0.05 & fold_change > 1 ~ "Upregulated",
-    p_value < 0.05 & fold_change < 1 ~ "Downregulated",
-    TRUE ~ "Not Significant"
-  ))
 
 # Save results to CSV
 write.csv(upregulated_genes, "~/HackBio/stage2/upregulated_genes.csv")
