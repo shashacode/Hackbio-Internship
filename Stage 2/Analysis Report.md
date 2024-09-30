@@ -64,7 +64,7 @@ A **diverging color palette** is useful when data can vary in two directions fro
 
 **Subset of Upregulated and Downregulated Genes**
 
-#### ![Figure 6: Gene Expression Chart for Down regulated and Upregulated gene.](https://github.com/shashacode/Hackbio-Internship/blob/main/Stage%202/Images/fold%20change.jpg)
+#### ![Figure 6: Gene Expression Chart for Down regulated and Upregulated gene.](https://github.com/shashacode/Hackbio-Internship/blob/main/Stage%202/Images/volcano_fold.jpg)
 
 **Top 5 Enriched Pathways**
 #### ![Figure 7: Top 5 Enriched .](https://github.com/shashacode/Hackbio-Internship/blob/main/Stage%202/Images/enrichment%20path.jpg)
